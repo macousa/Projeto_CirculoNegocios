@@ -48,8 +48,16 @@
     <Compile Include="BaseClassDAL.cs" />
     <Compile Include="ClientesDAL.cs" />
     <Compile Include="LogDAL.cs" />
-    <Compile Include="NoticiasDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CirculoNegocios.Entity\CirculoNegocios.Entity.csproj">
+      <Project>{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}</Project>
+      <Name>CirculoNegocios.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

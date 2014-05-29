@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CirculoNegocios.DAL", "Circ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CirculoNegocios.Util", "CirculoNegocios.Util\CirculoNegocios.Util.csproj", "{665B27B4-42D1-46C0-97CC-C560FB0AE080}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CirculoNegocios.Entity", "CirculoNegocios.Entity\CirculoNegocios.Entity.csproj", "{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{665B27B4-42D1-46C0-97CC-C560FB0AE080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{665B27B4-42D1-46C0-97CC-C560FB0AE080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{665B27B4-42D1-46C0-97CC-C560FB0AE080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
