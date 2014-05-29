@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8">
+    <meta content="n/a" charset="utf-8"/>
     <title>Círculo de Negócios</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="n/a">
-    <meta name="author" content="Marcio Coutinho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="n/a"/>
+    <meta name="author" content="Marcio Coutinho"/>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script>
+    <script type="text/javascript">
         function timer() {
             var d = new Date();
             var mydate = new Date()
@@ -130,12 +130,12 @@
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-2 column">
-                            <img alt="140x140" src="img/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                            <img alt="140x140" src="img/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                            <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                            <img alt="140x140" src="img/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                            <img alt="140x140" src="img/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                            <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                            <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                             <h2>Heading</h2>
                             <p>
                                 Donec id elit non mi porta gravida at eget metus. Fusce dapibus.
@@ -356,7 +356,7 @@
                                     <div style="margin: 10px 0px 10px 0px; text-align: center">
                                         <img src="img/marketing/09.png" class="img-thumbnail" />
                                     </div>
-                                    <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                                    <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
 
                                 </div>
                             </div>
