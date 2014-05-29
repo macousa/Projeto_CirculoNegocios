@@ -48,7 +48,6 @@
     <Compile Include="BaseClassDAL.cs" />
     <Compile Include="ClientesDAL.cs" />
     <Compile Include="LogDAL.cs" />
-    <Compile Include="NoticiasDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
