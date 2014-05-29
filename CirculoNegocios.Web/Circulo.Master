@@ -39,7 +39,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onload="timer()">
     <form id="form1" runat="server">
     <div>
         <div class="container">
@@ -65,23 +65,25 @@
                                         <li>
                                             <form class="navbar-form navbar-left" role="search">
                                                 <div class="form-group">
-                                                    <input type="text" value="Academia, Pizzaria" class="form-control">
+                                                    <asp:TextBox ID="txtBusca" runat="server" CssClass="form-control" Text="Pizzaria, Eletronicos"></asp:TextBox> 
                                                 </div>
                                             </form>
                                         </li>
                                         <li style="text-align: center; margin: 15px 0px 0px 0px;">onde</li>
                                         <li style="text-align: center; margin: 7px 0px 0px 10px;">
                                             <div class="btn-group">
-                                                <button class="btn btn-default" contenteditable="true">Estado</button>
-                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
-                                                <ul class="dropdown-menu" contenteditable="true">
-                                                    <li><a href="#">São Paulo</a></li>
-                                                    <li><a href="#">Rio de Janeiro</a></li>
-                                                    <li><a href="#">Minas Gerais</a></li>
-                                                </ul>
+                                                Estado:
+                                                <asp:DropDownList ID="ddlEstado" runat="server" CssClass="btn btn-default dropdown-toggle">
+                                                    <asp:ListItem Text="São Paulo"></asp:ListItem>
+                                                    <asp:ListItem Text="Rio de Janeiro"></asp:ListItem>
+                                                    <asp:ListItem Text="Minas Gerais"></asp:ListItem>
+                                                </asp:DropDownList>
+                                                
                                             </div>
                                         </li>
-                                        <li style="text-align: center; margin: 7px 10px 0px 10px;"><button type="submit" class="btn btn-default">Pesquisar</button></li>
+                                        <li style="text-align: center; margin: 7px 10px 0px 10px;">
+                                            <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" CssClass="btn btn-default"></asp:Button>
+                                        </li>
                                     </ul>
                                 </nav>
                                 </td>
