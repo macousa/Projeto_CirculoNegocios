@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CirculoNegocios.Web", "CirculoNegocios.Web\CirculoNegocios.Web.csproj", "{4A97F552-6652-4400-AF8F-025B7647A339}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CirculoNegocios.Business", "CirculoNegocios.Business\CirculoNegocios.Business.csproj", "{F8F76EE1-EAC2-4C96-83FF-B11BB6B871A2}"
