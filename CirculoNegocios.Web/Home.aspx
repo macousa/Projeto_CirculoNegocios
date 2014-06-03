@@ -7,12 +7,12 @@
     <div class="col-md-12 column">
         <div class="row clearfix">
             <div class="col-md-2 column">
-                <img alt="140x140" src="img/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <h2>
                     Heading</h2>
                 <p>
