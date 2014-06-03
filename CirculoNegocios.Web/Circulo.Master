@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script>
+    <script type="text/javascript">
         function timer() {
             var d = new Date();
             var mydate = new Date()
@@ -41,58 +41,49 @@
 </head>
 <body onload="timer()">
     <form id="form1" runat="server">
-    <div>
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <div>
-                        <table width="100%">
-                            <tr>
-                                <td>
-                                    <img style="margin-top: 40px; margin-bottom: 10px; margin-left: 60px;" class="center-block"
-                                        src="img/logo5.png" alt="logo" />
-                                </td>
-                                <td>
-                                    <div style="text-align: end; margin-bottom: 25px; margin-right: 25px;">
-                                        <img src="img/identidade.png" style="width: 20px; height: 20px" />
-                                        <img src="img/facebook.png" />
-                                    </div>
-                                    <div id="date" class="data">
-                                    </div>
-                                    <nav class="navbar navbar-default" role="navigation">
-                                    <ul class="nav navbar-nav navbar-left">
-                                        <li style="margin: 15px 0px 0px 10px;">Procuro por:</li>
-                                        <li>
-                                            <form class="navbar-form navbar-left" role="search">
-                                                <div class="form-group">
-                                                    <asp:TextBox ID="txtBusca" runat="server" CssClass="form-control" Text="Pizzaria, Eletronicos"></asp:TextBox> 
-                                                </div>
-                                            </form>
-                                        </li>
-                                        <li style="text-align: center; margin: 15px 0px 0px 0px;">onde</li>
-                                        <li style="text-align: center; margin: 7px 0px 0px 10px;">
-                                            <div class="btn-group">
-                                                Estado:
-                                                <asp:DropDownList ID="ddlEstado" runat="server" CssClass="btn btn-default dropdown-toggle">
-                                                    <asp:ListItem Text="São Paulo"></asp:ListItem>
-                                                    <asp:ListItem Text="Rio de Janeiro"></asp:ListItem>
-                                                    <asp:ListItem Text="Minas Gerais"></asp:ListItem>
-                                                </asp:DropDownList>
-                                                
-                                            </div>
-                                        </li>
-                                        <li style="text-align: center; margin: 7px 10px 0px 10px;">
-                                            <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" CssClass="btn btn-default"></asp:Button>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!--http://tutzstyle.com/wp-content/uploads/2013/11/conversao-dolar.html-->
-                    <div id="Mticker">
-                        <section class="barra-ticker pg-bgcolor3 mod">
+        <div>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <div>
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <img style="margin-top: 40px; margin-bottom: 10px; margin-left: 60px;" class="center-block"
+                                            src="img/logo5.png" alt="logo" />
+                                    </td>
+                                    <td>
+                                        <div style="text-align: end; margin-bottom: 25px; margin-right: 25px;">
+                                            <img src="img/identidade.png" style="width: 20px; height: 20px" alt="" />
+                                            <img src="img/facebook.png" alt="" />
+                                        </div>
+                                        <div id="date" class="data"></div>
+                                        <div class="navbar navbar-default" role="navigation">
+                                            <ul class="nav navbar-nav navbar-left">
+                                                <li style="margin: 15px 0px 0px 10px;">Procuro por:</li>
+                                                <li>
+                                                    <div class="navbar-form navbar-left" role="search">
+                                                        <div class="form-group">
+                                                            <asp:TextBox runat="server"  type="text" value="Academia, Pizzaria" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="text-align: center; margin: 15px 0px 0px 0px;">onde</li>
+                                                <li style="text-align: center; margin: 7px 0px 0px 10px;">
+                                                    <asp:DropDownList ID="DropDownList1" runat="server" class="btn btn-default" contenteditable="true">
+                                                        <asp:ListItem Selected="True" Text="Estado" Value="">Estado</asp:ListItem>
+                                                    </asp:DropDownList>
+                                                </li>
+                                                <li style="text-align: center; margin: 7px 10px 0px 10px;"><asp:Button runat="server"  type="submit" class="btn btn-default" Text="Pesquisar"/></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--http://tutzstyle.com/wp-content/uploads/2013/11/conversao-dolar.html-->
+                        <div id="Mticker">
+                            <section class="barra-ticker pg-bgcolor3 mod">
                         <div id="bolsas">
                             <h2 class="pg-bgcolor4"><a href="http://economia.uol.com.br/cotacoes/bolsas/" class="cl_white">Bolsas</a> <span class="pg-sprites1 seta"></span></h2>
                             <ul>
@@ -120,9 +111,9 @@
                             </ul>
                         </div>
                     </section>
-                    </div>
-                    <br />
-                    <nav class="navbar navbar-default" role="navigation">
+                        </div>
+                        <br />
+                        <nav class="navbar navbar-default" role="navigation">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
@@ -133,24 +124,22 @@
                         </ul>
                     </div>
                 </nav>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <div id="footer">
-                    <div class="copyright">
-                        <i class="sprite-selos sprite-selos-uol logouol">Circulo de Negócios</i> <span class="p1">
-                            © 1996 - 2014 CN - O melhor conteúdo. Todos os direitos reservados <a href="#">Hospedagem
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="footer">
+                        <div class="copyright">
+                            <i class="sprite-selos sprite-selos-uol logouol">Circulo de Negócios</i> <span class="p1">© 1996 - 2014 CN - O melhor conteúdo. Todos os direitos reservados <a href="#">Hospedagem
                                 Host</a></span>
-                        <div class="bts">
-                            <a href="#" id="btCrimesVirtuais">Crimes virtuais: denuncie</a> <span>|</span> <a
-                                href="#" id="btErratas">Erratas</a> <span>|</span> <a id="btComunicarErro" href="#">
-                                    Comunicar erro</a>
+                            <div class="bts">
+                                <a href="#" id="btCrimesVirtuais">Crimes virtuais: denuncie</a> <span>|</span> <a
+                                    href="#" id="btErratas">Erratas</a> <span>|</span> <a id="btComunicarErro" href="#">Comunicar erro</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>

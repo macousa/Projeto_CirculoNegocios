@@ -69,6 +69,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="CustomPage1.html" />
+    <Content Include="email\HtmlPage1.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.aspx" />
     <Content Include="img\facebook.png" />
