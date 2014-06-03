@@ -114,7 +114,6 @@
     <Content Include="img\passador\1.jpg" />
     <Content Include="img\passador\2.jpg" />
     <Content Include="img\passador\3.jpg" />
-    <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\html5shiv.js" />
     <Content Include="js\infobox.js" />
