@@ -7,12 +7,23 @@
     <div class="col-md-12 column">
         <div class="row clearfix">
             <div class="col-md-2 column">
-                <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <%--BANNER LATERAL ESQUERDA--%>
+                <asp:Repeater ID="rptBannerLateralEsquerda" runat="server">
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <a href='<%#string.Format(@"DetalheCliente.aspx?idCliente={0}", DataBinder.Eval(Container.DataItem,"idCliente").ToString()) %>'>
+                            <img alt="140x140" src='<%#System.Configuration.ConfigurationManager.AppSettings["NavigateUrlImagens"].ToString() + DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Substring(DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners"), DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Length - DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners")) %>'
+                                class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%--<img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <img alt="140x140" src="img/marketing/mk1.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
-                <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />--%>
                 <h2>
                     Heading</h2>
                 <p>
@@ -168,20 +179,31 @@
                 <!-- UOLLLLL -->
                 <div class="horizontalFixo fixoProdutos">
                     <h3>
-                        <b>Monster Pack</b></h3>
+                        <b>Destaque do dia</b></h3>
                     <ul class="produtos">
-                        <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
+                        <asp:Repeater ID="rptDestaqueDia" runat="server">
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
+                                    <img width="120" height="85" class="opacity-90 lazyload" src="img/marketing/00.jpg">
+                                </span><strong class="opacity-60">Eget metus</strong><br />
+                                    <span class="opacity-60 cor7">Eget metus. Fusce dapibus, tellus ac cursus comm.!</span>
+                                </a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <%--<li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img width="120" height="85" class="opacity-90 lazyload" src="img/marketing/00.jpg">
-                        </span><strong class="opacity-60">Eget metus</strong> <span class="opacity-60 cor7">
+                        </span><strong class="opacity-60">Eget metus</strong><br /> <span class="opacity-60 cor7">
                             Eget metus. Fusce dapibus, tellus ac cursus comm.!</span> </a></li>
                         <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img width="120" height="85" class="opacity-90 lazyload" src="img/marketing/12.jpg">
-                        </span><strong class="opacity-60">Metus scelerisque ante</strong> <span class="opacity-60 cor7">
+                        </span><strong class="opacity-60">Metus scelerisque ante</strong><br /> <span class="opacity-60 cor7">
                             Eget metus. Fusce dapibus, tellus ac.</span> </a></li>
-                        <li class="ultimo"><a class="opacity-hover" href="#"><span class="borda5 img">
+                        <li class="primeiro"><a class="opacity-hover" href="#">  <span class="borda5 img">
                             <img width="120" height="85" class="opacity-90 lazyload" src="img/marketing/13.jpg">
-                        </span><strong class="opacity-60">Nulla vel </strong><span class="opacity-60 cor7">Cras
-                            sit amet nibh libero, in gravida nulla. </span></a></li>
+                        </span><strong class="opacity-60">Nulla vel </strong><br /><span class="opacity-60 cor7">Cras
+                            sit amet nibh libero, in gravida nulla. </span></a></li>--%>
                     </ul>
                 </div>
                 <!-- UOLLLLL -->
@@ -190,8 +212,20 @@
                 <div class="row clearfix">
                     <div class="col-md-6 column">
                         <h4 style="text-align: center">
-                            .::Donec sed::.</h4>
-                        <div style="margin: 10px 0px 10px 0px; text-align: center">
+                            .::Promoção::.</h4>
+                        <%--PROMOCOES--%>
+                        <asp:Repeater ID="rptPromocoes" runat="server">
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <div style="margin: 10px 0px 10px 0px; text-align: center">
+                                    <p>
+                                        <asp:Literal ID="litTitulo" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"titulo").ToString() %>'></asp:Literal></p>
+                                    <img src='<%#System.Configuration.ConfigurationManager.AppSettings["NavigateUrlImagens"].ToString() + DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Substring(DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Promocoes"), DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Length - DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Promocoes")) %>' class="img-thumbnail" />
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <%--<div style="margin: 10px 0px 10px 0px; text-align: center">
                             <p>
                                 Fusce dapibus</p>
                             <img src="img/marketing/01.gif" class="img-thumbnail" />
@@ -235,7 +269,7 @@
                             <p>
                                 Cras sit amet nibh libero</p>
                             <img src="img/marketing/03.gif" class="img-thumbnail" />
-                        </div>
+                        </div>--%>
                     </div>
                     <div class="col-md-6 column">
                         <h2>
@@ -255,7 +289,7 @@
                         <div style="margin: 10px 0px 10px 0px; text-align: center">
                             <img src="img/marketing/09.png" class="img-thumbnail" />
                         </div>
-                        <img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
+                        <%--<img alt="140x140" src="img/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />--%>
                     </div>
                 </div>
             </div>
@@ -263,10 +297,18 @@
     </div>
     <div class="col-md-12 column">
         <div class="row clearfix">
+            <%--BANNER INFERIORES DO LADO ESQUERDO--%>
             <div class="col-md-2 column">
-                <div style="margin: 10px 0px 10px 0px; text-align: center">
-                    <img src="img/marketing/10.png" class="img-thumbnail" />
-                </div>
+                <asp:Repeater ID="rptBannerInferiorEsquerdo" runat="server">
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <div style="margin: 10px 0px 10px 0px; text-align: center">
+                            <img src='<%#System.Configuration.ConfigurationManager.AppSettings["NavigateUrlImagens"].ToString() + DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Substring(DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners"), DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Length - DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners")) %>'
+                                class="img-thumbnail" />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
             <div class="col-md-8 column">
                 <div class="moduloHorizontal">
@@ -274,82 +316,113 @@
                         <tr>
                             <td>
                                 <h3 style="color: #ffffff; padding-left: 15px">
-                                    <b>Monster Pack </b>
+                                    <b>Mais Procuradas... </b>
                                 </h3>
                             </td>
                             <td style="padding-right: 15px">
                                 <ul class="nav navbar-nav navbar-right">
                                     <li>
-                                        <input type="text" class="form-control" style="width: 150px;" value="Notícias..."></li>
+                                        <asp:TextBox ID="txtBuscaNoticiasMais" CssClass="form-control" Width="150px" runat="server"></asp:TextBox></li>
                                     <li>&nbsp;
-                                        <button type="submit" class="btn btn-default">
-                                            Buscar</button></li>
+                                        <asp:Button ID="btnBuscarNoticiasMais" runat="server" CssClass="btn btn-default"
+                                            Text="Buscar" OnClick="btnBuscarNoticiasMais_Click" /></li>
                                 </ul>
                             </td>
                         </tr>
                     </table>
                     <div class="itens">
                         <ul>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-1">
+                            <asp:Repeater ID="rptNoticiasMaisProcuradas" runat="server">
+                                <HeaderTemplate>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                    <li><a class="opacity-hover" href="#">
+                                        <img class="opacity-90 lazyload" src='<%#System.Configuration.ConfigurationManager.AppSettings["NavigateUrlImagens"].ToString() + DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Substring(DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Noticias"), DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Length - DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Noticias")) %>'
+                                            width="140" height="98">
+                                        <span class="detNoticia">
+                                            <asp:Literal ID="litSinopse" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Sinopse").ToString() %>'></asp:Literal></span>
+                                    </a></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            <%--<li><a class="opacity-hover" href="#">
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/nasi17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Virada cultural agita SP e você ouve o melhor das atrações</span>
                             </a></li>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-2">
+                            <li><a class="opacity-hover" href="#">
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/mv17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Vitrola livre especial Virada tem MV Bill, União Black e outros</span>
                             </a></li>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-3">
+                            <li><a class="opacity-hover" href="#" >
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/paul17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Ex-vocalista do Iron Paul Dianno faz 55 anos; ouça clássicos</span>
                             </a></li>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-1">
+                            <li><a class="opacity-hover" href="#" >
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/nasi17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Virada cultural agita SP e você ouve o melhor das atrações</span>
                             </a></li>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-2">
+                            <li><a class="opacity-hover" href="#" >
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/mv17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Vitrola livre especial Virada tem MV Bill, União Black e outros</span>
                             </a></li>
-                            <li><a class="opacity-hover" href="#" name="horizontal-fixo-radiouol-3">
+                            <li><a class="opacity-hover" href="#" >
                                 <img class="opacity-90 lazyload" src="http://h.imguol.com/1405/paul17k.jpg" width="140"
                                     height="98">
                                 <span class="detNoticia">Ex-vocalista do Iron Paul Dianno faz 55 anos; ouça clássicos</span>
-                            </a></li>
+                            </a></li>--%>
                         </ul>
                     </div>
                 </div>
                 <div class="horizontalFixo fixoProdutos" style="margin-bottom: 25px;">
                     <h3>
-                        <b>Monster Pack</b></h3>
+                        <b>Ofertas</b></h3>
                     <ul class="produtos">
-                        <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
+                        <asp:Repeater ID="rptOfertas" runat="server">
+                            <HeaderTemplate>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
+                                    <img src="img/marketing/14.jpg">
+                                </span><strong class="opacity-60">Eget metus</strong><br />
+                                    <span class="opacity-60 cor7">Eget metus. Fusce dapibus, tellus ac cursus comm.!</span>
+                                </a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <%--<li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img src="img/marketing/14.jpg">
-                        </span><strong class="opacity-60">Eget metus</strong> <span class="opacity-60 cor7">
+                        </span><strong class="opacity-60">Eget metus</strong><br /> <span class="opacity-60 cor7">
                             Eget metus. Fusce dapibus, tellus ac cursus comm.!</span> </a></li>
                         <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img src="img/marketing/15.jpg">
-                        </span><strong class="opacity-60">Metus scelerisque ante</strong> <span class="opacity-60 cor7">
+                        </span><strong class="opacity-60">Metus scelerisque ante</strong><br /> <span class="opacity-60 cor7">
                             Eget metus. Fusce dapibus, tellus ac.</span> </a></li>
-                        <li class="ultimo"><a class="opacity-hover" href="#"><span class="borda5 img">
+                        <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img src="img/marketing/16.jpg">
-                        </span><strong class="opacity-60">Nulla vel </strong><span class="opacity-60 cor7">Cras
+                        </span><strong class="opacity-60">Nulla vel </strong><br /><span class="opacity-60 cor7">Cras
                             sit amet nibh libero, in gravida nulla. </span></a></li>
                         <li class="primeiro"><a class="opacity-hover" href="#"><span class="borda5 img">
                             <img src="img/marketing/17.jpg">
-                        </span><strong class="opacity-60">Metus scelerisque ante</strong> <span class="opacity-60 cor7">
-                            Eget metus. Fusce dapibus, tellus ac.</span> </a></li>
+                        </span><strong class="opacity-60">Metus scelerisque ante</strong> <br /><span class="opacity-60 cor7">
+                            Eget metus. Fusce dapibus, tellus ac.</span> </a></li>--%>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 column">
-                <div style="margin: 10px 0px 10px 0px; text-align: center">
-                    <img src="img/marketing/11.png" class="img-thumbnail" />
-                </div>
+                <%--BANNERS INFERIORES DO LADO DIREITO--%>
+                <asp:Repeater ID="rptBannerInferiorDireita" runat="server">
+                    <HeaderTemplate>
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <div style="margin: 10px 0px 10px 0px; text-align: center">
+                            <img src='<%#System.Configuration.ConfigurationManager.AppSettings["NavigateUrlImagens"].ToString() + DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Substring(DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners"), DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().Length - DataBinder.Eval(Container.DataItem,"imagemFilePath").ToString().LastIndexOf("Banners")) %>'
+                                class="img-thumbnail" />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
     </div>

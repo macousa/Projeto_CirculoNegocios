@@ -43,21 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CirculoNegocios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CirculoNegocios.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="BannerEntity.cs" />
+    <Compile Include="BannerPrincipalEntity.cs" />
+    <Compile Include="CategoriaClienteEntity.cs" />
+    <Compile Include="CategoriaNoticiaEntity.cs" />
+    <Compile Include="ClienteEntity.cs" />
+    <Compile Include="EstadoEntity.cs" />
+    <Compile Include="LogradouroEntity.cs" />
+    <Compile Include="NoticiaEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="CirculoNegocios.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CirculoNegocios.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="TipoBannerEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CirculoNegocios.DB\CirculoNegocios.DB.csproj">
+      <Project>{9A3F5152-7056-49F9-B75F-F90A6590CD74}</Project>
+      <Name>CirculoNegocios.DB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

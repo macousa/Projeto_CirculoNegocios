@@ -32,28 +32,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAccessLayer, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\DataAccessLayer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClassDAL.cs" />
-    <Compile Include="ClientesDAL.cs" />
-    <Compile Include="LogDAL.cs" />
+    <Compile Include="BannerDAL.cs" />
+    <Compile Include="EstadoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CirculoNegocios.DB\CirculoNegocios.DB.csproj">
+      <Project>{9A3F5152-7056-49F9-B75F-F90A6590CD74}</Project>
+      <Name>CirculoNegocios.DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CirculoNegocios.Entity\CirculoNegocios.Entity.csproj">
       <Project>{97DF57CD-1EE5-4BBC-853B-6BA080EF917D}</Project>
       <Name>CirculoNegocios.Entity</Name>
