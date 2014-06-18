@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace CirculoNegocios.Web
 {
-    public partial class Contato : System.Web.UI.Page
+    public partial class CirculoSemBolsa : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), Guid.NewGuid().ToString(), "initialize();", true);
-            }
+
         }
     }
 }

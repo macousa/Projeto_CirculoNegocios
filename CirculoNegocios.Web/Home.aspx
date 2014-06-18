@@ -25,9 +25,10 @@
                 <img alt="140x140" src="img/marketing/mk2.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />
                 <img alt="140x140" src="img/marketing/mk3.jpg" class="img-thumbnail" style="margin: 10px 0px 10px 0px" />--%>
                 <h2>
-                    Heading</h2>
+                    
+                    <asp:Literal ID="litTituloNoticiaLateralEsquerda" runat="server"></asp:Literal></h2>
                 <p>
-                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus.
+                    <asp:Literal ID="litSinopseNoticiaLateralEsquerda" runat="server"></asp:Literal>
                 </p>
                 <p>
                     <a class="btn" href="#">Leia mais »</a></p>
@@ -40,7 +41,7 @@
                         <li data-slide-to="2" data-target="#carousel-990819" class="active"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="item">
+                        <div class="item active">
                             <img src="img/passador/1.jpg" />
                             <div class="carousel-caption">
                                 <h4>
@@ -64,7 +65,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="item active">
+                        <div class="item">
                             <img src="img/passador/3.jpg" />
                             <div class="carousel-caption">
                                 <h4>
@@ -84,10 +85,10 @@
                 </div>
                 <blockquote>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                        ante.
+                        
+                    <asp:Literal ID="litDescricaoBannerAtivo" runat="server"></asp:Literal>
                     </p>
-                    <small>Someone famous <cite>Source Title</cite></small>
+                    <small><asp:Literal ID="litRodapeBannerAtivo" runat="server"></asp:Literal> <cite><asp:Literal ID="litRodape2BannerAtivo" runat="server"></asp:Literal></cite></small>
                 </blockquote>
                 <div class="row clearfix">
                     <div class="col-md-7 column" style="margin-top: 10px">
@@ -179,7 +180,7 @@
                 <!-- UOLLLLL -->
                 <div class="horizontalFixo fixoProdutos">
                     <h3>
-                        <b>Destaque do dia</b></h3>
+                        <b>Cursos Gratuitos</b></h3>
                     <ul class="produtos">
                         <asp:Repeater ID="rptDestaqueDia" runat="server">
                             <HeaderTemplate>

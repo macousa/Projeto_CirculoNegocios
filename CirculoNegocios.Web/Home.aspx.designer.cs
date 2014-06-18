@@ -22,6 +22,51 @@ namespace CirculoNegocios.Web {
         protected global::System.Web.UI.WebControls.Repeater rptBannerLateralEsquerda;
         
         /// <summary>
+        /// litTituloNoticiaLateralEsquerda control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litTituloNoticiaLateralEsquerda;
+        
+        /// <summary>
+        /// litSinopseNoticiaLateralEsquerda control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litSinopseNoticiaLateralEsquerda;
+        
+        /// <summary>
+        /// litDescricaoBannerAtivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litDescricaoBannerAtivo;
+        
+        /// <summary>
+        /// litRodapeBannerAtivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litRodapeBannerAtivo;
+        
+        /// <summary>
+        /// litRodape2BannerAtivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litRodape2BannerAtivo;
+        
+        /// <summary>
         /// rptDestaqueDia control.
         /// </summary>
         /// <remarks>

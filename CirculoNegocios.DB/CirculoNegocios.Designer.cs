@@ -30,6 +30,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("CirculoNegocioModel", "FK__tbFilePat__idNot__44CA3770", "tbNoticias", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CirculoNegocios.DB.tbNoticia), "tbFilePathNoticias", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CirculoNegocios.DB.tbFilePathNoticia), true)]
 [assembly: EdmRelationshipAttribute("CirculoNegocioModel", "FK__tbOfertas__idCli__46B27FE2", "tbCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CirculoNegocios.DB.tbCliente), "tbOferta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CirculoNegocios.DB.tbOferta), true)]
 [assembly: EdmRelationshipAttribute("CirculoNegocioModel", "FK__tbPromoco__idCli__489AC854", "tbCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CirculoNegocios.DB.tbCliente), "tbPromoco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CirculoNegocios.DB.tbPromocao), true)]
+[assembly: EdmRelationshipAttribute("CirculoNegocioModel", "FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CirculoNegocios.DB.tbCategoriaCliente), "tbSubCategoriaCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CirculoNegocios.DB.tbSubCategoriaCliente), true)]
+[assembly: EdmRelationshipAttribute("CirculoNegocioModel", "FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(CirculoNegocios.DB.tbSubCategoriaCliente), "tbCliente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(CirculoNegocios.DB.tbCliente), true)]
 
 #endregion
 
@@ -256,6 +258,22 @@ namespace CirculoNegocios.DB
             }
         }
         private ObjectSet<tbPromocao> _tbPromocaos;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tbSubCategoriaCliente> tbSubCategoriaClientes
+        {
+            get
+            {
+                if ((_tbSubCategoriaClientes == null))
+                {
+                    _tbSubCategoriaClientes = base.CreateObjectSet<tbSubCategoriaCliente>("tbSubCategoriaClientes");
+                }
+                return _tbSubCategoriaClientes;
+            }
+        }
+        private ObjectSet<tbSubCategoriaCliente> _tbSubCategoriaClientes;
 
         #endregion
 
@@ -347,6 +365,14 @@ namespace CirculoNegocios.DB
         public void AddTotbPromocaos(tbPromocao tbPromocao)
         {
             base.AddObject("tbPromocaos", tbPromocao);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tbSubCategoriaClientes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotbSubCategoriaClientes(tbSubCategoriaCliente tbSubCategoriaCliente)
+        {
+            base.AddObject("tbSubCategoriaClientes", tbSubCategoriaCliente);
         }
 
         #endregion
@@ -991,6 +1017,78 @@ namespace CirculoNegocios.DB
         private global::System.String _responsavelUltimaAlteracao;
         partial void OnresponsavelUltimaAlteracaoChanging(global::System.String value);
         partial void OnresponsavelUltimaAlteracaoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descricao
+        {
+            get
+            {
+                return _Descricao;
+            }
+            set
+            {
+                OnDescricaoChanging(value);
+                ReportPropertyChanging("Descricao");
+                _Descricao = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Descricao");
+                OnDescricaoChanged();
+            }
+        }
+        private global::System.String _Descricao;
+        partial void OnDescricaoChanging(global::System.String value);
+        partial void OnDescricaoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Rodape1
+        {
+            get
+            {
+                return _Rodape1;
+            }
+            set
+            {
+                OnRodape1Changing(value);
+                ReportPropertyChanging("Rodape1");
+                _Rodape1 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Rodape1");
+                OnRodape1Changed();
+            }
+        }
+        private global::System.String _Rodape1;
+        partial void OnRodape1Changing(global::System.String value);
+        partial void OnRodape1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Rodape2
+        {
+            get
+            {
+                return _Rodape2;
+            }
+            set
+            {
+                OnRodape2Changing(value);
+                ReportPropertyChanging("Rodape2");
+                _Rodape2 = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Rodape2");
+                OnRodape2Changed();
+            }
+        }
+        private global::System.String _Rodape2;
+        partial void OnRodape2Changing(global::System.String value);
+        partial void OnRodape2Changed();
 
         #endregion
 
@@ -1224,6 +1322,28 @@ namespace CirculoNegocios.DB
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tbCliente>("CirculoNegocioModel.FK__tbCliente__idCat__123EB7A3", "tbClientes", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CirculoNegocioModel", "FK__tbSubCate__idCat__51300E55", "tbSubCategoriaCliente")]
+        public EntityCollection<tbSubCategoriaCliente> tbSubCategoriaClientes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbSubCategoriaCliente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbSubCategoriaCliente", value);
                 }
             }
         }
@@ -2014,6 +2134,30 @@ namespace CirculoNegocios.DB
         private Nullable<global::System.Boolean> _ativo;
         partial void OnativoChanging(Nullable<global::System.Boolean> value);
         partial void OnativoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> idSubCategoriaCliente
+        {
+            get
+            {
+                return _idSubCategoriaCliente;
+            }
+            set
+            {
+                OnidSubCategoriaClienteChanging(value);
+                ReportPropertyChanging("idSubCategoriaCliente");
+                _idSubCategoriaCliente = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idSubCategoriaCliente");
+                OnidSubCategoriaClienteChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _idSubCategoriaCliente;
+        partial void OnidSubCategoriaClienteChanging(Nullable<global::System.Int32> value);
+        partial void OnidSubCategoriaClienteChanged();
 
         #endregion
 
@@ -2142,6 +2286,44 @@ namespace CirculoNegocios.DB
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tbPromocao>("CirculoNegocioModel.FK__tbPromoco__idCli__489AC854", "tbPromoco", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CirculoNegocioModel", "FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente")]
+        public tbSubCategoriaCliente tbSubCategoriaCliente
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tbSubCategoriaCliente> tbSubCategoriaClienteReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tbSubCategoriaCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbSubCategoriaCliente", value);
                 }
             }
         }
@@ -3445,6 +3627,223 @@ namespace CirculoNegocios.DB
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tbCliente>("CirculoNegocioModel.FK__tbPromoco__idCli__489AC854", "tbCliente", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="CirculoNegocioModel", Name="tbSubCategoriaCliente")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tbSubCategoriaCliente : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tbSubCategoriaCliente object.
+        /// </summary>
+        /// <param name="id">Initial value of the id property.</param>
+        public static tbSubCategoriaCliente CreatetbSubCategoriaCliente(global::System.Int32 id)
+        {
+            tbSubCategoriaCliente tbSubCategoriaCliente = new tbSubCategoriaCliente();
+            tbSubCategoriaCliente.id = id;
+            return tbSubCategoriaCliente;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> idCategoria
+        {
+            get
+            {
+                return _idCategoria;
+            }
+            set
+            {
+                OnidCategoriaChanging(value);
+                ReportPropertyChanging("idCategoria");
+                _idCategoria = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idCategoria");
+                OnidCategoriaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _idCategoria;
+        partial void OnidCategoriaChanging(Nullable<global::System.Int32> value);
+        partial void OnidCategoriaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+            set
+            {
+                OnNomeChanging(value);
+                ReportPropertyChanging("Nome");
+                _Nome = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Nome");
+                OnNomeChanged();
+            }
+        }
+        private global::System.String _Nome;
+        partial void OnNomeChanging(global::System.String value);
+        partial void OnNomeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> DataUltimaAlteracao
+        {
+            get
+            {
+                return _DataUltimaAlteracao;
+            }
+            set
+            {
+                OnDataUltimaAlteracaoChanging(value);
+                ReportPropertyChanging("DataUltimaAlteracao");
+                _DataUltimaAlteracao = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DataUltimaAlteracao");
+                OnDataUltimaAlteracaoChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _DataUltimaAlteracao;
+        partial void OnDataUltimaAlteracaoChanging(Nullable<global::System.DateTime> value);
+        partial void OnDataUltimaAlteracaoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String responsavelUltimaAlteracao
+        {
+            get
+            {
+                return _responsavelUltimaAlteracao;
+            }
+            set
+            {
+                OnresponsavelUltimaAlteracaoChanging(value);
+                ReportPropertyChanging("responsavelUltimaAlteracao");
+                _responsavelUltimaAlteracao = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("responsavelUltimaAlteracao");
+                OnresponsavelUltimaAlteracaoChanged();
+            }
+        }
+        private global::System.String _responsavelUltimaAlteracao;
+        partial void OnresponsavelUltimaAlteracaoChanging(global::System.String value);
+        partial void OnresponsavelUltimaAlteracaoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CirculoNegocioModel", "FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente")]
+        public tbCategoriaCliente tbCategoriaCliente
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tbCategoriaCliente> tbCategoriaClienteReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tbCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tbCategoriaCliente>("CirculoNegocioModel.FK__tbSubCate__idCat__51300E55", "tbCategoriaCliente", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CirculoNegocioModel", "FK__tbCliente__idSub__58D1301D", "tbCliente")]
+        public EntityCollection<tbCliente> tbClientes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tbCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbCliente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tbCliente>("CirculoNegocioModel.FK__tbCliente__idSub__58D1301D", "tbCliente", value);
                 }
             }
         }

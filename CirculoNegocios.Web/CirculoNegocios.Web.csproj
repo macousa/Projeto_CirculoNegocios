@@ -64,6 +64,7 @@
   <ItemGroup>
     <Content Include="AnuncieConosco.aspx" />
     <Content Include="AnuncieConosco.html" />
+    <Content Include="Busca.aspx" />
     <Content Include="Categorias.html" />
     <Content Include="Contato.aspx" />
     <Content Include="Contato.html" />
@@ -126,6 +127,7 @@
     <Content Include="js\scripts.js" />
     <Content Include="QuemSomos.aspx" />
     <Content Include="QuemSomos.html" />
+    <Content Include="ResultadoBusca.html" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -147,12 +149,26 @@
     <Compile Include="AnuncieConosco.aspx.designer.cs">
       <DependentUpon>AnuncieConosco.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Busca.aspx.cs">
+      <DependentUpon>Busca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Busca.aspx.designer.cs">
+      <DependentUpon>Busca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Circulo.Master.cs">
       <DependentUpon>Circulo.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Circulo.Master.designer.cs">
       <DependentUpon>Circulo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CirculoSemBolsa.Master.cs">
+      <DependentUpon>CirculoSemBolsa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CirculoSemBolsa.Master.designer.cs">
+      <DependentUpon>CirculoSemBolsa.Master</DependentUpon>
     </Compile>
     <Compile Include="Contato.aspx.cs">
       <DependentUpon>Contato.aspx</DependentUpon>
@@ -212,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Circulo.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CirculoSemBolsa.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

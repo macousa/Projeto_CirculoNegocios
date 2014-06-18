@@ -9,5 +9,6 @@ namespace CirculoNegocios.Entity
 {
     public class ClienteEntity : tbCliente
     {
+        public string nomeCategoria { get; set; }
     }
 }

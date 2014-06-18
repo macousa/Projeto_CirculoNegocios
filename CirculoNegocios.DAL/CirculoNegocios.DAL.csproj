@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BannerDAL.cs" />
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="EstadoDAL.cs" />
+    <Compile Include="NoticiaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

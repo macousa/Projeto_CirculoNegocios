@@ -29,7 +29,7 @@ namespace CirculoNegocios.Web
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Busca.aspx?txt=" + txtBuscaServicos.Text);
         }
     }
 }

@@ -2,6 +2,59 @@
     CodeBehind="Contato.aspx.cs" Inherits="CirculoNegocios.Web.Contato" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/infobox.js"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var secheltLoc = new google.maps.LatLng(-23.635708, -46.640976);
+
+            var myMapOptions = {
+                zoom: 15
+                , center: secheltLoc
+                , mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var theMap = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);
+
+
+            var marker = new google.maps.Marker({
+                map: theMap,
+                draggable: true,
+                position: new google.maps.LatLng(-23.635708, -46.640976),
+                visible: true
+            });
+
+            var boxText = document.createElement("div");
+            boxText.style.cssText = "border:2px solid #FFF; margin-top: 8px;background:#FFF;color:#000;font-family:Arial;font-size:12px;padding: .5em 1em;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;text-shadow:0 -1p;-webkit-box-shadow: 0 0 18px;box-shadow: 0 0 8px;";
+            boxText.innerHTML = "Circulo de Negócios - Sala 10";
+
+            var myOptions = {
+                content: boxText
+                , disableAutoPan: false
+                , maxWidth: 0
+                , pixelOffset: new google.maps.Size(-100, 0)
+                , zIndex: null
+                , boxStyle: {
+                    background: "url('tipbox.gif') no-repeat"
+                  , opacity: 0.75
+                  , width: "200px"
+                }
+                , closeBoxMargin: "10px 2px 2px 2px"
+                , closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+                , infoBoxClearance: new google.maps.Size(1, 1)
+                , isHidden: false
+                , pane: "floatPane"
+                , enableEventPropagation: false
+            };
+
+            google.maps.event.addListener(marker, "click", function (e) {
+                ib.open(theMap, this);
+            });
+
+            var ib = new InfoBox(myOptions);
+            ib.open(theMap, marker);
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-md-12 column">
