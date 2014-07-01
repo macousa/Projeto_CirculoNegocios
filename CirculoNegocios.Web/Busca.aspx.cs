@@ -38,14 +38,14 @@ namespace CirculoNegocios.Web
 
         public void GetData()
         {
-            for (int Cont = 1; Cont <= 100; Cont++)
-            {
-                Ar.Add(new Suprimento("Registro" + Cont, "Black"));
-            }
+            //for (int Cont = 1; Cont <= 100; Cont++)
+            //{
+            //    Ar.Add(new Suprimento("Registro" + Cont, "Black"));
+            //}
 
             PagedDataSource Pgs = new PagedDataSource();
             Pgs.AllowPaging = true; //Seta paginação no PagedDataSource
-            Pgs.DataSource = Ar; // No caso, está setando como datasource o um objeto mas pode ser por exemplo, um DataSet.
+            //Pgs.DataSource = Ar; // No caso, está setando como datasource o um objeto mas pode ser por exemplo, um DataSet.
             Pgs.PageSize = 10; //Número de registros por página
             if (PaginaAtual >= Pgs.PageCount)
             {

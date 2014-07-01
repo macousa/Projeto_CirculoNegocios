@@ -68,6 +68,8 @@
     <Content Include="Categorias.html" />
     <Content Include="Contato.aspx" />
     <Content Include="Contato.html" />
+    <Content Include="LerMais.html" />
+    <Content Include="css\StyleIE8.css" />
     <Content Include="ResultadoBusca.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />

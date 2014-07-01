@@ -17,8 +17,8 @@ namespace CirculoNegocios.Web
         {
             if (!IsPostBack)
             {
-                CarregaBanners();
-                CarregaNoticias();
+                //CarregaBanners();
+                //CarregaNoticias();
                 
             }
         }

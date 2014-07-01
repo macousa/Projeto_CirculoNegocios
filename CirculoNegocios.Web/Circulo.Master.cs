@@ -15,7 +15,7 @@ namespace CirculoNegocios.Web
         {
             if (!IsPostBack)
             {
-                PreencheCombos();
+                //PreencheCombos();
             }
         }
 

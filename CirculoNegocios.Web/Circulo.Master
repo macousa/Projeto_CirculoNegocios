@@ -3,17 +3,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="text/html"/>
     <title>Círculo de Negócios</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="n/a">
-    <meta name="author" content="Marcio Coutinho">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="n/a"/>
+    <meta name="author" content="Marcio Coutinho"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
   <![endif]-->
+
+    <!--[if IE 8]>
+        <link href="css/StyleIE8.css" rel="stylesheet">
+    <![endif]-->  
     <!-- Fav and touch icons -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -121,7 +125,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="Home.aspx">Home</a></li>
                             <li><a href="QuemSomos.aspx">Quem somos</a></li>
-                            <li><a href="Categorias.aspx">Categorias</a></li>
+                            <li><a href="Categorias.html">Categorias</a></li>
                             <li><a href="AnuncieConosco.aspx">Anuncie conosco</a></li>
                             <li><a href="Contato.aspx">Contato</a></li>
                         </ul>
